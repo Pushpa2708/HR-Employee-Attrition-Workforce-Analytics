@@ -2,101 +2,161 @@
 
 ## Project Overview
 
-This project explores employee attrition and workforce patterns using an HR employee dataset containing 1,240 employee records and 21 attributes.
+An end-to-end HR analytics project focused on understanding employee attrition and workforce patterns using a dataset of **1,240 employee records and 21 attributes**.
 
-The objective is to understand employee exits, identify workforce patterns and develop data-driven recommendations that could support employee retention.
+The project uses Excel, Python, MySQL and Power BI to analyse employee exits, explore workforce trends and generate data-driven insights that can support employee retention and workforce planning.
 
-**Project Status:** In Progress
+**Project Status:** Completed
 
 ## Business Problem
 
-Employee attrition can affect organisational stability, recruitment costs and workforce productivity.
+Employee attrition can affect organisational stability, recruitment costs and workforce productivity. This project analyses employee data to identify attrition patterns and areas that HR teams may need to investigate.
 
-This project investigates employee attrition through questions such as:
+### Business Questions
 
-- Which departments have the highest employee exits?
-- What are the most frequently recorded reasons for leaving?
-- How do salary and satisfaction differ between employees who stayed and left?
-- Are employees leaving at particular stages of their careers?
-- Does promotion history relate to employee attrition?
+1. Which departments have the highest employee exits and attrition rates?
+2. What are the most common reasons employees leave?
+3. How do salary and satisfaction differ between employees who stayed and those who left?
+4. How does attrition vary across age groups and job levels?
+5. Does employment type influence observed attrition patterns?
+6. Are performance, training and promotion history associated with employee attrition?
+7. Which areas should HR prioritise for further retention analysis?
 
 ## Dataset Overview
 
-- Total Records: 1,240
-- Total Columns: 21
-- Employees who stayed: 1,063
-- Employees who left: 177
-- Departments: 7
-- Job Titles: 41
+| Metric | Value |
+|---|---:|
+| Total Employees | 1,240 |
+| Employees Stayed | 1,063 |
+| Employees Left | 177 |
+| Overall Attrition Proportion | 14.27% |
+| Departments | 7 |
+| Job Titles | 41 |
 
-### Key Attributes
-
-- Employee demographics: Age, Gender, Education, City
+**Key Attributes:**
+- Demographics: Age, Gender, Education, City
 - Job Information: Department, Job Title, Job Level, Employment Type
 - Compensation: Annual Salary
-- Employee Development: Training Hours, Promotions
-- Performance and Satisfaction: Performance Score, Satisfaction Score
+- Development: Training Hours, Promotions
+- Performance: Performance Score, Satisfaction Score
 - Attrition: Attrition Status, Exit Date, Exit Reason
 
 ## Tools & Technologies
 
-- Microsoft Excel
-- Excel Formulas
-- Excel Tables
-- PivotTables
-- Data Visualization (Planned)
+| Tool | Application |
+|---|---|
+| Microsoft Excel | Data cleaning, formulas, PivotTables and dashboard |
+| Python | Exploratory Data Analysis |
+| Pandas & NumPy | Data manipulation and numerical analysis |
+| Matplotlib & Seaborn | Data visualisation |
+| MySQL | SQL queries, CTEs, subqueries and window functions |
+| Power BI | DAX, KPI cards, interactive charts and slicers |
 
 ## Project Workflow
 
-### 1. Data Understanding
-- Identified the dataset structure and column meanings.
+### 1. Data Understanding & Quality Assessment
+- Explored dataset structure and column descriptions.
 - Defined business questions.
-- Documented dataset limitations.
+- Checked duplicate employee IDs and missing values.
+- Validated hire and exit dates.
+- Reviewed numeric ranges and data consistency.
 
-### 2. Data Quality Assessment
-- Checked duplicate employee IDs.
-- Examined missing values.
-- Validated exit dates against hire dates.
-- Checked numeric ranges and text consistency.
-- Preserved expected blank values for employees who were still working.
+### 2. Excel Analysis
+- Used formulas, tables and PivotTables for workforce analysis.
+- Analysed department-wise exits and exit reasons.
+- Compared employee satisfaction and other workforce metrics.
+- Created an Excel HR dashboard.
 
-### 3. Exploratory Analysis (In Progress)
-- Created an initial department-wise employee exit PivotTable.
-- Identified exit counts across seven departments.
+### 3. Python Exploratory Data Analysis
+- Inspected and analysed employee records using Pandas and NumPy.
+- Examined attrition patterns across departments and employee groups.
+- Compared salary, satisfaction, tenure, performance and promotions.
+- Performed correlation analysis.
+- Created visualisations using Matplotlib and Seaborn.
 
-### Preliminary Finding
+### 4. SQL Analysis
+- Queried employee records using MySQL.
+- Analysed attrition across departments and job levels.
+- Used aggregate functions, CASE statements, subqueries and CTEs.
+- Applied window functions for department ranking.
+- Performed data quality validation queries.
 
-The initial department-wise exit counts show:
+### 5. Power BI Dashboard
+- Created six KPI measures using DAX.
+- Developed interactive KPI cards and charts.
+- Added department and job-level slicers.
+- Presented employee exits, exit reasons, satisfaction trends and employment type distribution.
 
-| Department | Employees Who Left |
-|---|---:|
-| Sales | 60 |
-| Operations | 46 |
-| Engineering | 36 |
-| Finance | 14 |
-| Marketing | 8 |
-| Legal | 7 |
-| HR | 6 |
-| **Total** | **177** |
+## Key Findings
 
-These are exit counts, not department-wise attrition rates. Further analysis is required before comparing departments.
+- **Overall Attrition:** 177 employees left, representing 14.27% of the dataset.
+- **Department Analysis:** Sales had the highest attrition rate (23.72%), followed by Operations (18.93%).
+- **Exit Reasons:** Better compensation (55), limited growth (41) and work-life balance (33) were the most frequently recorded reasons.
+- **Employee Satisfaction:** Average satisfaction was 2.78 among employees who left and 3.61 among employees who stayed.
+- **Salary Analysis:** Average salary was approximately ₹10.40 lakh among employees who left and ₹11.36 lakh among employees who stayed.
+- **Age Group Analysis:** Employees aged 18–25 had the highest observed attrition rate (16.05%).
+- **Employment Type:** Contract employees had the highest observed attrition rate (16%).
+
+## Proposed Solutions & Recommendations
+
+- **Department Retention:** Investigate higher attrition in Sales and Operations.
+- **Compensation:** Review salary structures and benefits.
+- **Career Growth:** Strengthen career development and internal growth opportunities.
+- **Employee Satisfaction:** Collect regular feedback and address workplace concerns.
+- **Workforce Monitoring:** Use the Power BI dashboard to monitor attrition trends and identify areas requiring attention.
+
+These are proposed recommendations based on the observed dataset patterns, not tested HR interventions.
+
+## Project Screenshots
+
+The repository includes:
+- Excel HR Dashboard and PivotTable Analysis
+- Python correlation matrix and attrition visualisations
+- Power BI HR Analytics Dashboard
 
 ## Dataset Limitations
 
-- No direct overtime-hours or workload measurements.
+- No direct overtime or workload measurements.
 - No direct stress-level measurements.
-- Work-life balance is available only as a recorded exit-reason category.
 - Salary expectations are not available.
-- Findings represent patterns in the provided sample dataset and should not be treated as causal conclusions.
+- Work-life balance is recorded only as an exit-reason category.
+- The dataset reporting period is not documented.
+- Findings indicate patterns and associations, not causation.
 
-## Planned Work
+## Repository Structure
 
-- Calculate department-wise attrition rates.
-- Analyse exit reasons.
-- Investigate salary, satisfaction, tenure and promotion patterns.
-- Create visualisations and an HR dashboard.
-- Develop evidence-based retention recommendations.
+```text
+HR-Employee-Attrition-Analytics/
+│
+├── data/
+│   └── hr_employees.csv
+│
+├── excel/
+│   └── hr_employees_working.xlsx
+│
+├── notebook/
+│   └── HR_Employee_Attrition_Analysis.ipynb
+│
+├── powerbi/
+│   └── HR_Employee_Attrition_Analytics.pbix
+│
+├── reports/
+│
+├── screenshots/
+│   ├── excel_screenshot/
+│   ├── notebook_Screenshot/
+│   └── powerBI_Dashboard.png
+│
+├── sql/
+│   └── hr_employee_attrition_analysis.sql
+│
+└── README.md
+```
 
-## Project Objective
+## Conclusion
 
-To develop practical HR analytics skills by transforming employee data into meaningful workforce insights and actionable business recommendations.
+This project demonstrates an end-to-end HR analytics workflow, transforming employee data into meaningful workforce insights using Excel, Python, MySQL and Power BI.
+
+It highlights attrition patterns across departments, compensation, satisfaction, age groups and employment types, providing a foundation for further HR investigation and data-driven workforce planning.
+
+**Note:** This is a practice/sample dataset, not verified data from a real organisation. The reporting period is undocumented; therefore, the 14.27% attrition proportion should not be interpreted as an annual rate.
